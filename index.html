@@ -10,7 +10,7 @@ var request = require('request'),
 
 request('http://www.reddit.com', funciton(err, resp, body){
     if(!err && resp.statusCode == 200){
-      var $ cheerio.load(body);
+      var $ = cheerio.load(body);
       $('a.title','#siteTable').each(function(){
         var url = this.attr('href');
         urls.push(url);
