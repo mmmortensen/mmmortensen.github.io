@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
 <body>
+<h1>Reddit Scraper</h1>
 <p>I'm hosted with Github Pages.</p>
+<script>
+var request = require('request'),
+    cheerio = require('cheerio'),
+    urls = [];
+
+request('http://www.reddit.com', funciton(err, resp, body){
+    if(!err && resp.statusCode == 200){
+      var $ cheerio.load(body);
+      $('a.title','#siteTable').each(function(){
+        var url = this.attr('href');
+        urls.push(url);
+      });
+
+      console.log(urls);
+    }
+});
+</script>
 </body>
 </html>
