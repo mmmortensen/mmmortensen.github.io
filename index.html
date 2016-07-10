@@ -9,7 +9,7 @@
 var request = require('request'),
     cheerio = require('cheerio'),
     urls = [];
-
+console.log(5 + 6);
 request('http://www.reddit.com', function(err, resp, body){
     if(!err && resp.statusCode == 200){
       var $ = cheerio.load(body);
