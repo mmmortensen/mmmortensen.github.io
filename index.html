@@ -5,7 +5,7 @@
 <p>I'm hosted with Github Pages.</p>
 <div class="results"></div>
 <p id="demo"></p>
-<script src="bundle.js" language="javascript">
+<script src="bundle.js" language="javascript" type="text/javascript">
 var request = require('request'),
     cheerio = require('cheerio'),
     urls = [];
@@ -22,7 +22,9 @@ request('http://www.reddit.com', function(err, resp, body){
       document.getElementById('demo').innerHTML = 5 + 6;
     }
 });
-document.querySelector('.results').innerHTML = 'Hello World!'+urls;
+<!--
+            document.write("Hello World!")
+//-->
 </script>
 </body>
 </html>
