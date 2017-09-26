@@ -5,7 +5,7 @@
       </div>
     </header>
     <h1>Det her er h1</h1>
-    <p>brødtekst</p>
+    <p>brødtekst2</p>
     <nav>
       <ul>
         <li>bullet point</li>
